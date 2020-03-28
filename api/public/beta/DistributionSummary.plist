@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Bon-SwiftUI.ipa</key>
+	<array>
+		<dict>
+			<key>architectures</key>
+			<array>
+				<string>arm64</string>
+			</array>
+			<key>certificate</key>
+			<dict>
+				<key>SHA1</key>
+				<string>1B6B712C82F1C55F8F2202D029B7382B53F7AFF5</string>
+				<key>dateExpires</key>
+				<string>18.07.20</string>
+				<key>type</key>
+				<string>Apple Development</string>
+			</dict>
+			<key>embeddedBinaries</key>
+			<array>
+				<dict>
+					<key>architectures</key>
+					<array>
+						<string>arm64</string>
+					</array>
+					<key>certificate</key>
+					<dict>
+						<key>SHA1</key>
+						<string>1B6B712C82F1C55F8F2202D029B7382B53F7AFF5</string>
+						<key>dateExpires</key>
+						<string>18.07.20</string>
+						<key>type</key>
+						<string>Apple Development</string>
+					</dict>
+					<key>name</key>
+					<string>AppAuth.framework</string>
+					<key>team</key>
+					<dict>
+						<key>id</key>
+						<string>R9YDPJ28R4</string>
+						<key>name</key>
+						<string>James Hilton-Barber</string>
+					</dict>
+				</dict>
+				<dict>
+					<key>architectures</key>
+					<array>
+						<string>arm64</string>
+					</array>
+					<key>certificate</key>
+					<dict>
+						<key>SHA1</key>
+						<string>1B6B712C82F1C55F8F2202D029B7382B53F7AFF5</string>
+						<key>dateExpires</key>
+						<string>18.07.20</string>
+						<key>type</key>
+						<string>Apple Development</string>
+					</dict>
+					<key>name</key>
+					<string>OktaAuth.framework</string>
+					<key>team</key>
+					<dict>
+						<key>id</key>
+						<string>R9YDPJ28R4</string>
+						<key>name</key>
+						<string>James Hilton-Barber</string>
+					</dict>
+				</dict>
+			</array>
+			<key>entitlements</key>
+			<dict>
+				<key>application-identifier</key>
+				<string>R9YDPJ28R4.com.hiltonbarber.Bon-SwiftUI</string>
+				<key>com.apple.developer.applesignin</key>
+				<array>
+					<string>Default</string>
+				</array>
+				<key>com.apple.developer.team-identifier</key>
+				<string>R9YDPJ28R4</string>
+				<key>get-task-allow</key>
+				<true/>
+			</dict>
+			<key>name</key>
+			<string>Bon-SwiftUI.app</string>
+			<key>profile</key>
+			<dict>
+				<key>UUID</key>
+				<string>0605e70c-d746-4ce4-975e-686eccade037</string>
+				<key>name</key>
+				<string>iOS Team Provisioning Profile: com.hiltonbarber.Bon-SwiftUI</string>
+			</dict>
+			<key>team</key>
+			<dict>
+				<key>id</key>
+				<string>R9YDPJ28R4</string>
+				<key>name</key>
+				<string>James Hilton-Barber</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>
