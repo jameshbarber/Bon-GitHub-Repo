@@ -1,17 +1,22 @@
 import React from 'react';
+import { Router, Link } from "@reach/router"
 import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
-import Link from '@material-ui/core/Link';
-import ProTip from './ProTip';
+import MaterialLink from '@material-ui/core/Link';
+import LoginPage from './components/LoginPage';
+import Dashboard from './components/dashboard/Dashboard';
+import Checkout from './components/checkout/Checkout';
+import SignIn from './components/sign-in/SignIn';
+import Register from './components/sign-up/SignUp';
 
 function Copyright() {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
       {'Copyright © '}
-      <Link color="inherit" href="https://material-ui.com/">
-        Your Website
-      </Link>{' '}
+      <MaterialLink color="inherit" href="https://material-ui.com/">
+       BON DIGITAL
+      </MaterialLink>{' '}
       {new Date().getFullYear()}
       {'.'}
     </Typography>
@@ -19,15 +24,14 @@ function Copyright() {
 }
 
 export default function App() {
-  return (
-    <Container maxWidth="sm">
-      <Box my={4}>
-        <Typography variant="h4" component="h1" gutterBottom>
-          Create React App v4-beta example
-        </Typography>
-        <ProTip />
-        <Copyright />
-      </Box>
-    </Container>
+  return (  
+    <div>
+    <Router>
+      <Dashboard path="/" />
+      <SignIn path="login" />
+      <Register path="register" />
+    </Router>
+    <Copyright></Copyright>
+    </div>
   );
 }
