@@ -1,37 +1,34 @@
 import React, { Component } from "react";
 import logo from './logo.svg';
 import './App.css';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+import LoginBox from "./components/LoginBox";
+import Home from "./components/Home";
+import Sider from "./components/Sidebar";
+import { Layout, Menu, Breadcrumb } from 'antd';
 
-class App extends Component {
+const { Header, Content, Footer } = Layout;
 
-    constructor(props) {
-        super(props);
-        this.state = {storeName: ""};
-    }
+export default function App() {
+  return (
+    <Layout>
+      <Header>
+        Test
+      </Header>
+      <Content>
+        Test
+      </Content>
+      <Footer>Bon Digital</Footer>
+    </Layout>
 
-    callAPI() {
-        fetch("http://localhost:3000/api/receipts")
-            .then(res => res.text())
-            .then(res => this.state)
-            .catch(err => err);
-    }
-
-    componentDidMount() {
-      console.log(this.callAPI());
-        this.callAPI();
-    }
-
-    render() {
-        return (
-            <div className="App">
-                <header className="App-header">
-                    <img src={logo} className="App-logo" alt="logo" />
-                    <h1 className="App-title">Bon Receipts: The solution</h1>
-                </header>
-                <p className="App-intro">{this.state.apiResponse}</p>
-            </div>
-        );
-    }
+  );
 }
 
-export default App;
+function Receipts() {
+  return <h2>Receipts</h2>;
+}
