@@ -12,12 +12,12 @@ import {
 import Breadcrumbs from '../../../components/@vuexy/breadCrumbs/BreadCrumb'
 
 class ReceiptCard extends React.Component {
-  render() {
+  render() { 
     return (
       <div>
         <Card>
         <CardBody>
-          <h1>Rewe East Side Mall</h1>
+          <h1>Hello</h1>
           <h4>PURCHASE RECEIPT</h4>
           <hr className="my-1" />
           <h2>Test</h2>

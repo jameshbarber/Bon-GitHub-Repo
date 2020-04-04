@@ -10,7 +10,7 @@ class Receipt {
         this.receiptItems = []
         this.receiptItems.push(new Item(purchasedItems));
     }
-
+    
     setProperties(id, storeId, purchasedItems){
         this.date = date;
         this.storeId = storeId;

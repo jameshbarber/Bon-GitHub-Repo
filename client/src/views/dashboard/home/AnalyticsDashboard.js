@@ -41,57 +41,95 @@ let $primary = "#7367F0",
   $white = "#fff"
 
 class AnalyticsDashboard extends React.Component {
+  state = {
+    response: '',
+    post: '',
+    responseToPost: '',
+  };
+
+  componentDidMount() {
+    this.callApi()
+      .then(res => this.setState({ response: res.express }))
+      .catch(err => console.log(err));
+  }
+
+  callApi = async () => {
+    const response = await fetch('/lastPurchase');
+    const body = await response.json();
+    if (response.status !== 200) throw Error(body.message);
+    return body;
+  };
+
   render() {
     return (
       <React.Fragment>
-        <Row className="match-height">
+        <Row>
           <Col lg="6" md="12">
-            <SalesCard />
+            <Row>
+              <Col lg="12" md="12" sm="12">
+                <p> data={this.state.response}</p>
+                <ReceiptCard></ReceiptCard>
+              </Col>
+            </Row>
           </Col>
-          <Col lg="3" md="6" sm="12">
-            <ReceiptCard></ReceiptCard>
-          </Col>
-          <Col lg="3" sm="6">
-            <StatisticsCard
-              hideChart
-              iconRight
-              iconBg="primary"
-              icon={<Cpu className="primary" size={22} />}
-              stat="86%"
-              statTitle="CPU Usage"
-            />
-          </Col>
-          <Col lg="3" sm="6">
-            <StatisticsCard
-              hideChart
-              iconRight
-              iconBg="success"
-              icon={<Server className="success" size={22} />}
-              stat="1.2gb"
-              statTitle="Memory Usage"
-            />
-          </Col>
-          <Col lg="3" sm="6">
-            <StatisticsCard
-              hideChart
-              iconRight
-              iconBg="danger"
-              icon={<Activity className="danger" size={22} />}
-              stat="0.1%"
-              statTitle="Downtime Ratio"
-            />
-          </Col>
-          <Col lg="3" sm="6">
-            <StatisticsCard
-              hideChart
-              iconRight
-              iconBg="warning"
-              icon={<AlertOctagon className="warning" size={22} />}
-              stat="13"
-              statTitle="Issues Found"
-            />
+          <Col lg="6" md="12">
+            <Col lg="12" md="12">
+              <SalesCard />
+            </Col>
+            <Row className="match-height">
+              <Col lg="6" sm="12">
+                <StatisticsCard
+                  hideChart
+                  iconRight
+                  iconBg="primary"
+                  icon={<Cpu className="primary" size={22} />}
+                  stat="86L"
+                  statTitle="Water Saved"
+                />
+              </Col>
+              <Col lg="6" sm="12">
+                <StatisticsCard
+                  hideChart
+                  iconRight
+                  iconBg="success"
+                  icon={<Server className="success" size={22} />}
+                  stat="1.2gb"
+                  statTitle="Memory Usage"
+                />
+              </Col>
+              <Col lg="6" sm="12">
+                <StatisticsCard
+                  hideChart
+                  iconRight
+                  iconBg="danger"
+                  icon={<Activity className="danger" size={22} />}
+                  stat="0.1%"
+                  statTitle="Downtime Ratio"
+                />
+              </Col>
+              <Col lg="6" sm="12">
+                <StatisticsCard
+                  hideChart
+                  iconRight
+                  iconBg="warning"
+                  icon={<AlertOctagon className="warning" size={22} />}
+                  stat="13"
+                  statTitle="Issues Found"
+                />
+              </Col>
+            </Row>
           </Col>
         </Row>
+      </React.Fragment>
+    )
+  }
+}
+
+export default AnalyticsDashboard
+
+
+{/*
+
         <Row className="match-height">
           <Col md="6" sm="12">
             <AvgSession labelColor={$label_color} primary={$primary} />
@@ -132,9 +170,4 @@ class AnalyticsDashboard extends React.Component {
             <DispatchedOrders />
           </Col>
         </Row>
-      </React.Fragment>
-    )
-  }
-}
-
-export default AnalyticsDashboard
+*/}

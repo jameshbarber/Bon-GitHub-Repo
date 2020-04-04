@@ -11,7 +11,7 @@ const checkoutID = lazy(() => import("./views/dashboard/checkoutID/CheckoutIDVie
 const analyticsDashboard = lazy(() => import("./views/dashboard/home/AnalyticsDashboard"))
 const ReceiptDetail = lazy(() => import("./views/dashboard/receipt/ReceiptDetail"))
 const LoginView = lazy(() => import('./views/authentication/login/Login'))
-
+const Uploader = lazy(()=> import("./views/pages/Uploader"))
 const error404 = lazy(() => import("./views/pages/misc/error/404"))
 
 // Set Layout and Component Using App Route
@@ -72,6 +72,11 @@ class AppRouter extends React.Component {
             path="/login"
             component={LoginView}
             />
+            <AppRoute
+              path="/upload"
+              component={Uploader}
+              />
+
           <AppRoute component={error404} fullLayout />
         </Switch>
       </Router>

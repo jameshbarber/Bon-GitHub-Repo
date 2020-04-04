@@ -2,6 +2,7 @@
   "name": "vuexy-react-admin-dashboard",
   "version": "1.0.0",
   "private": true,
+  "proxy": "http://localhost:9000/api",
   "dependencies": {
     "@auth0/auth0-spa-js": "^1.6.3",
     "@firebase/app": "^0.5.2",

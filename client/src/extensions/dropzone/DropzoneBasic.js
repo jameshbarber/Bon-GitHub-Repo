@@ -5,7 +5,7 @@ import { useDropzone } from "react-dropzone"
 function BasicDropzone(props) {
   const [files, setFiles] = useState([])
   const { getRootProps, getInputProps } = useDropzone({
-    accept: "image/*",
+    accept: "*",
     onDrop: acceptedFiles => {
       setFiles(
         acceptedFiles.map(file =>
@@ -51,7 +51,7 @@ class DropzoneBasic extends React.Component {
     return (
       <Card>
         <CardHeader>
-          <CardTitle>Basic</CardTitle>
+          <CardTitle>Add Files</CardTitle>
         </CardHeader>
         <CardBody>
           <BasicDropzone />

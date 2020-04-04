@@ -72,18 +72,13 @@ class BreadCrumbs extends React.Component {
               </DropdownToggle>
               <DropdownMenu tag="ul" right>
                 <DropdownItem tag="li">
-                  <NavLink className="text-dark w-100" to="/chat">
-                    Chat
+                  <NavLink className="text-dark w-100" to="/captureImage">
+                    Take Picture
                   </NavLink>
                 </DropdownItem>
                 <DropdownItem tag="li">
-                  <NavLink className="text-dark w-100" to="/email/inbox">
-                    Email
-                  </NavLink>
-                </DropdownItem>
-                <DropdownItem tag="li">
-                  <NavLink className="text-dark w-100" to="/calendar">
-                    Calendar
+                  <NavLink className="text-dark w-100" to="/upload">
+                    Upload
                   </NavLink>
                 </DropdownItem>
               </DropdownMenu>
